@@ -20,7 +20,7 @@ app.use(function(req, res, next) {
 
         if(req.url == "/AGVyrobceTestuList") {
             return new Promise(resolve => {
-                request({ url: "https://covid-19-diagnostics.jrc.ec.europa.eu/devices/export?target_type=6", method: req.method },
+                request({ url: "https://covid-19-diagnostics.jrc.ec.europa.eu/devices/export", method: req.method },
                     function (error, response, body) {
                         if (!error) {
                             resolve(body);
